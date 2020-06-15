@@ -15,7 +15,13 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 }
-
+.section {
+  height: 600px;
+}
+.row {
+  display: flex;
+}
 @import "styles/App";
 @import "styles/Header";
 @import "styles/TestAssigmentScreen";
+@import "styles/SecondSection";

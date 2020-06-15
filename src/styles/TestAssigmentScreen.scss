@@ -1,10 +1,8 @@
 .first_section{
   background: url("../assets/banner-photo.jpg") center;
   background-size: cover;
-  height: 600px;
   color: #fff;
   padding-top: 106px;
-
 }
 .first_section h1 {
   font-family: $mainFont;
@@ -26,7 +24,7 @@
 }
 .first_section button {
   font-family: $mainFont;
-  background: $buttonBGColor;
+  background: $redColor;
   display: flex;
   margin-top: 34px;
   border: none;
@@ -36,4 +34,5 @@
   padding: 9px 58px;
   border-radius: 4px;
   line-height: 120%;
+  cursor: pointer;
 }
