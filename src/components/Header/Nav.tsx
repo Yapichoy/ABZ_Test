@@ -13,7 +13,7 @@ const NavItem : React.FC<INavItemProps> = (props,{link, text}) =>{
       </div>
     );
 }
-function Nav() {
+const Nav = () => {
     return (
         <nav className="top-nav">
             <NavItem key={"1"} link={"/"} text={"About me"}/>
