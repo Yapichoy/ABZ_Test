@@ -1,0 +1,27 @@
+header{
+  height: 60px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0ff;
+}
+.top-nav {
+  display: flex;
+}
+.nav-item {
+  margin-right: 29px;
+}
+.nav-item:last-child{
+  margin-right: 0;
+}
+.nav-item a {
+  text-decoration: none;
+  font-family: $mainFont;
+  color: $navFontColor;
+  font-size: 14px;
+}
