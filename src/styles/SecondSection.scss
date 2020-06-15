@@ -1,0 +1,46 @@
+.second_section {
+  padding-top: 145px;
+}
+.second_section h1 {
+  font-family: $mainFont;
+  font-size: 49px;
+  font-weight: 400;
+  color: $darkTextColor;
+  margin: 0 auto;
+}
+.second_section .photo-wrapper img{
+  width: 335px;
+  margin-left: 28px;
+}
+.description-wrapper {
+  margin-left: 50px;
+  text-align: left;
+}
+.description-wrapper h3{
+  font-family: $mainFont;
+  font-size: 24px;
+  font-weight: 400;
+  color: $darkTextColor;
+  margin: 0px;
+  line-height: 100%;
+}
+.description-wrapper p {
+  font-family: $mainFont;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 24px 0;
+  text-align: justify;
+  line-height: 140%;
+}
+.description-wrapper p.last-text{
+  margin: 31px 0;
+}
+.bottom-row{
+  margin-top: 65px;
+}
+.description-wrapper .link {
+  font-family: $mainFont;
+  font-weight: 600;
+  text-decoration: none;
+  color: $redColor;
+}
