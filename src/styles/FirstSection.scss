@@ -22,17 +22,6 @@
   line-height: 150%;
   margin: 28px 0 0;
 }
-.first_section button {
-  font-family: $mainFont;
-  background: $redColor;
-  display: flex;
+.first_section .btn {
   margin-top: 34px;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  color: white;
-  padding: 9px 58px;
-  border-radius: 4px;
-  line-height: 120%;
-  cursor: pointer;
 }
