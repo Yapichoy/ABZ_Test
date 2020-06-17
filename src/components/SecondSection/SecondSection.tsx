@@ -3,11 +3,11 @@ import manLaptop from "../../assets/man-laptop-v1.svg";
 import {NavLink} from "react-router-dom";
 const SecondSection = () => {
     return (
-        <div className={"container section second_section"}>
-            <div className="row">
+        <div className={"_container section second_section"}>
+            <div className="_row">
                 <h1>Let's get acquainted</h1>
             </div>
-            <div className="row bottom-row">
+            <div className="_row bottom-row">
                 <div className="photo-wrapper">
                     <img src={manLaptop} alt=""/>
                 </div>

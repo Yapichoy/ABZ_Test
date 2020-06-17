@@ -4,6 +4,8 @@ import Header from "./components/Header/Header";
 import FirstSection from "./components/FirstSection/FirstSection";
 import SecondSection from "./components/SecondSection/SecondSection";
 import Users from "./components/UsersSetion/Users";
+import RegisterSection from "./components/RegisterSection/RegisterSection";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <FirstSection/>
       <SecondSection/>
       <Users/>
+      <RegisterSection/>
+      <Footer/>
     </div>
   );
 }

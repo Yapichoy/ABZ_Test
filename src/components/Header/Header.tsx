@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 function Header() {
     return (
-        <header className="container">
+        <header className="_container header">
             <div className="logo-wrapper">
                 <img src={logo} alt=""/>
             </div>
