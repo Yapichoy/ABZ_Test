@@ -1,14 +1,17 @@
 import React from 'react';
 import './index.scss';
 import Header from "./components/Header/Header";
-import TestAssigmentScreen from "./components/TestAssigmentScreen/TestAssigmentScreen";
+import FirstSection from "./components/FirstSection/FirstSection";
 import SecondSection from "./components/SecondSection/SecondSection";
+import Users from "./components/UsersSetion/Users";
+
 function App() {
   return (
     <div className="App">
       <Header/>
-      <TestAssigmentScreen/>
+      <FirstSection/>
       <SecondSection/>
+      <Users/>
     </div>
   );
 }

@@ -1,0 +1,46 @@
+.users-wrapper {
+  margin-top: 266px;
+}
+.users-wrapper h1 {
+  font-family: $mainFont;
+  font-size: 50px;
+  color: $darkTextColor;
+  font-weight: 400;
+  margin: 0;
+}
+.users-wrapper h5 {
+  font-family: $mainFont;
+  font-size: 16px;
+  color: $greyColor;
+  font-weight: 400;
+  margin: 10px 0 0;
+}
+.users{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.user {
+  margin-top: 78px;
+}
+.user .photo {
+
+}
+.user .name {
+  font-family: $mainFont;
+  font-size: 24px;
+  font-weight: 400;
+  color: $darkTextColor;
+  margin: 10px 0 8px;
+}
+.user .description {
+  font-family: $mainFont;
+  font-size: 16px;
+  font-weight: 400;
+  color: $greyColor;
+  text-align: center;
+  margin-bottom: 3px;
+}
+.users-wrapper .btn{
+  margin: 34px auto 0;
+  padding: 9px 61px;
+}
