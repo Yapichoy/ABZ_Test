@@ -3,7 +3,7 @@ import User from "./User";
 
 const Users = () => {
     return (
-        <div className={"container section users-wrapper"}>
+        <div className={"_container section users-wrapper"}>
             <h1>Our cheerful users</h1>
             <h5>Attention! Sorting users by registration date</h5>
             <div className="users">
@@ -13,7 +13,7 @@ const Users = () => {
                <User />
                <User />
             </div>
-            <button className={"btn"}>Show more</button>
+            <button className={"_btn"}>Show more</button>
         </div>
     );
 }

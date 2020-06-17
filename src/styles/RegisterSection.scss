@@ -1,0 +1,60 @@
+.register_section {
+  margin-top: 323px;
+  form {
+    max-width: 468px;
+    margin: 0 auto;
+    padding: 28px 0;
+  }
+  .form-group {
+    text-align: left;
+    margin-bottom: 19px;
+  }
+  label {
+    font-family: $formFont;
+    color: $darkTextColor;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .form-control {
+    font-family: $formFont;
+    color: $darkTextColor;
+    font-size: 16px;
+    padding: 0 15px;
+    &::placeholder {
+      color: $lightGrey;
+    }
+    &:focus{
+      color: $darkTextColor;
+    }
+  }
+  .text-muted {
+    font-family: $formFont;
+    color: $darkTextColor!important;
+    font-size: 12px;
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+  .custom-control {
+    min-height: 32px;
+    padding-left: 26px;
+    display: flex;
+    align-items: center;
+    .custom-control-label {
+      &:before {
+        background: white;
+        border: 1px solid rgb(173, 181, 189);
+      }
+    }
+  }
+  .custom-file{
+    .custom-file-label{
+      &:after {
+        background: $darkedWhite;
+        padding: .375rem .95rem;
+      }
+    }
+  }
+  ._btn{
+    margin: 41px auto 0;
+  }
+}

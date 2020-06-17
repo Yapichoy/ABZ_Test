@@ -1,4 +1,4 @@
-header{
+header.header{
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -11,16 +11,21 @@ header{
 }
 .top-nav {
   display: flex;
-}
-.nav-item {
-  margin-right: 29px;
-}
-.nav-item:last-child{
-  margin-right: 0;
-}
-.nav-item a {
-  text-decoration: none;
-  font-family: $mainFont;
-  color: $darkTextColor;
-  font-size: 14px;
+  height: 100%;
+  .nav-item {
+    margin-right: 29px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:last-child{
+      margin-right: 0;
+    }
+    a {
+      text-decoration: none;
+      font-family: $mainFont;
+      color: $darkTextColor;
+      font-size: 14px;
+    }
+  }
 }
