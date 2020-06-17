@@ -1,29 +1,40 @@
 import React from 'react';
 import '../../index.scss';
+import {connect} from "react-redux";
 import {NavLink} from "react-router-dom";
 
 interface INavItemProps {
+    id?: string,
     link: string,
     text: string
 }
-const NavItem : React.FC<INavItemProps> = (props,{link, text}) =>{
+
+const NavItem : React.FC<INavItemProps> = (props) =>{
     return (
       <div className={"nav-item"}>
         <NavLink to={props.link}>{props.text}</NavLink>
       </div>
     );
 }
-const Nav = () => {
+interface INavigationProps {
+    navItems: Array<object>
+}
+let Nav : React.FC<INavigationProps> = (props) => {
+    debugger
+    console.log(props)
     return (
         <nav className="top-nav">
-            <NavItem key={"1"} link={"/"} text={"About me"}/>
-            <NavItem key={"2"} link={"/"} text={"Relationships"}/>
-            <NavItem key={"3"} link={"/"} text={"Requirements"}/>
-            <NavItem key={"4"} link={"/"} text={"Users"}/>
-            <NavItem key={"5"} link={"/"} text={"Sign Up"}/>
+            {props.navItems.map((navLink:any) => {
+                return <NavItem key={navLink.id} link={navLink.link} text={navLink.name}/>
+            })}
 
         </nav>
     );
 }
-
-export default Nav;
+const mapStateToProps = (state : any) => {
+    return {
+        navItems: state.navigation.navItems
+    }
+}
+let NavContainer = connect(mapStateToProps)(Nav)
+export default NavContainer;
