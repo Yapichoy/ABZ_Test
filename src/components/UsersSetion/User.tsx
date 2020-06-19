@@ -13,7 +13,7 @@ const User : React.FC<IUserProps>= (props) => {
     return (
         <div className={"user"}>
             <div className="photo">
-                <img src={photo} alt=""/>
+                <img src={props.photo} alt=""/>
             </div>
             <div className="name">
                 {props.name}

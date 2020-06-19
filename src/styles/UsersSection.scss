@@ -25,6 +25,10 @@
       font-weight: 400;
       color: $darkTextColor;
       margin: 10px 0 8px;
+      max-width: 240px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     .description {
       font-family: $mainFont;
@@ -33,11 +37,8 @@
       color: $greyColor;
       text-align: center;
       margin-bottom: 3px;
-    }
-    .email {
-      max-width: 333px;
+      max-width: 240px;
       overflow: hidden;
-      white-space: nowrap;
       text-overflow: ellipsis;
     }
   }
