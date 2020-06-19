@@ -20,8 +20,6 @@ interface INavigationProps {
     navItems: Array<object>
 }
 let Nav : React.FC<INavigationProps> = (props) => {
-    debugger
-    console.log(props)
     return (
         <nav className="top-nav">
             {props.navItems.map((navLink:any) => {
