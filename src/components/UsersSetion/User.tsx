@@ -1,23 +1,31 @@
 import React from "react";
 import photo from "../../assets/photo-cover.png";
 
-const User = () => {
+interface IUserProps {
+    name        : string,
+    position    : string,
+    email       : string,
+    phone       : string,
+    photo       : string
+}
+
+const User : React.FC<IUserProps>= (props) => {
     return (
         <div className={"user"}>
             <div className="photo">
                 <img src={photo} alt=""/>
             </div>
             <div className="name">
-                Maximillian
+                {props.name}
             </div>
             <div className="position description">
-                Leading specialist of the Control Department
+                {props.position}
             </div>
             <div className="email description">
-                controldepartment@gmail
+                {props.email}
             </div>
             <div className="phone description">
-                +380 50 678 03 24
+                {props.phone}
             </div>
         </div>
     );
