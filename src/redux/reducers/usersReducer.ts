@@ -1,11 +1,36 @@
-// @ts-ignore
 import {getUsers} from "../../api/api";
 
 const SET_USERS = "SET_USERS";
 const LOADING   = "LOADING";
 const LOADED    = "LOADED";
 
-let initialState : any = {
+// Generics
+export type UserType = {
+    id: number,
+    name: string,
+    email: string,
+    phone: string,
+    position: string,
+    position_id: number,
+    registration_timestamp: number,
+    photo: string
+}
+export interface UserStateType  {
+    users: Array<UserType>,
+    page : number,
+    total_pages: number,
+    total_users: number,
+    count: number,
+    links: object,
+    is_loading: boolean
+}
+type ActionType = {
+    type: string,
+    data: UserStateType
+}
+
+// initial state
+let initialState : UserStateType = {
     users : [],
     page: 0,
     total_pages: 0,
@@ -18,7 +43,8 @@ let initialState : any = {
     is_loading: false
 };
 
-let usersReducer = (state = initialState, action:any) => {
+//reducer
+let usersReducer = (state = initialState, action:ActionType)  : UserStateType => {
     switch (action.type) {
         case SET_USERS:
             state = {
@@ -37,15 +63,17 @@ let usersReducer = (state = initialState, action:any) => {
     return state;
 };
 
-export const setUsersThunkCreator = (nextUrl:string) => (dispatch:any) => {
+//thunks
+export const setUsersThunkCreator = (next_url:string) => (dispatch:Function) => {
     dispatch(loading());
-    getUsers(nextUrl).then((data:any)=>{
+    getUsers(next_url).then((data:UserStateType)=>{
         dispatch(loaded());
         dispatch(setUsersActionCreator(data));
     });
 }
 
-export const setUsersActionCreator = (data:any) => {
+// action creators
+export const setUsersActionCreator = (data:UserStateType) => {
     return {
         type: SET_USERS,
         data
@@ -61,4 +89,5 @@ export const loaded = () => {
         type: LOADED
     }
 }
+
 export default usersReducer;

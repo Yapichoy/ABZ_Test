@@ -1,14 +1,12 @@
 import React, {useEffect} from "react";
 import User from "./User";
 import {connect} from "react-redux";
-import {setUsersThunkCreator} from "../../redux/reducers/usersReducer";
+import {setUsersThunkCreator, UserStateType, UserType} from "../../redux/reducers/usersReducer";
 import spinner from "../../assets/Spinner.svg";
 
-interface IUsersProps {
-    users: Array<object>,
+interface IUsersProps extends UserStateType {
     next_url: string,
-    setUsers: Function,
-    is_loading: boolean
+    setUsers: (next_url : string) => void,
 }
 
 const Users : React.FC<IUsersProps> = (props) => {
@@ -20,7 +18,7 @@ const Users : React.FC<IUsersProps> = (props) => {
             <h1>Our cheerful users</h1>
             <h5>Attention! Sorting users by registration date</h5>
             <div className="users">
-                { props.users.map((user : any) => <User key={user.id} name={user.name} position={user.position} email={user.email} phone={user.phone} photo={user.photo}/>)}
+                { props.users.map((user : UserType) => <User key={user.id} {...user}/>)}
                 {   props.is_loading &&
                     <div className={"spinner"}>
                         <img src={spinner}/>

@@ -1,16 +1,10 @@
 import React, {useEffect} from "react";
 // @ts-ignore
 import Bootstrap, { BP } from "bootstrap-4-react";
+import {UserType} from "../../redux/reducers/usersReducer";
 
-interface IUserProps {
-    name        : string,
-    position    : string,
-    email       : string,
-    phone       : string,
-    photo       : string
-}
 
-const User : React.FC<IUserProps>= (props) => {
+const User : React.FC<UserType>= (props) => {
     useEffect(() => {
         window.setTimeout(() => Bootstrap.tooltip('.user p'), 1000);
     },[])

@@ -8,12 +8,14 @@ import RegisterSection from "./components/RegisterSection/RegisterSection";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  return (
+
+    return (
     <div className="App">
       <Header/>
       <FirstSection/>
       <SecondSection/>
-      <Users/>
+      // @ts-ignore
+      <Users />
       <RegisterSection/>
       <Footer/>
     </div>
