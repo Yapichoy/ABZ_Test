@@ -9,6 +9,9 @@
 .users{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  min-height: 237px;
+  width: 100%;
 
   .user {
     margin-top: 78px;
@@ -47,4 +50,15 @@
 }
 .tooltip-inner {
   max-width: 100%!important;
+}
+.spinner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(218, 218, 218, 0.68);
 }
