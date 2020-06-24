@@ -1,3 +1,4 @@
+// @ts-ignore
 import {getUsers} from "../../api/api";
 
 const SET_USERS = "SET_USERS";
