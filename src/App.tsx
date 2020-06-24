@@ -9,17 +9,15 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
 
-    return (
-    <div className="App">
-      <Header/>
-      <FirstSection/>
-      <SecondSection/>
-      // @ts-ignore
-      <Users />
-      <RegisterSection/>
-      <Footer/>
+    // @ts-ignore
+    return <div className="App">
+        <Header/>
+        <FirstSection/>
+        <SecondSection/>
+        <Users/>
+        <RegisterSection/>
+        <Footer/>
     </div>
-  );
 }
 
 export default App;

@@ -17,11 +17,11 @@ export type UserType = {
 }
 export interface UserStateType  {
     users: Array<UserType>,
-    page : number,
-    total_pages: number,
-    total_users: number,
-    count: number,
-    links: object,
+    page? : number,
+    total_pages?: number,
+    total_users?: number,
+    count?: number,
+    links?: object,
     is_loading: boolean
 }
 type ActionType = {

@@ -2,28 +2,20 @@ import React from 'react';
 import '../../index.scss';
 import {connect} from "react-redux";
 import {NavLink} from "react-router-dom";
+import {NavItemType, NavStateType} from "../../redux/reducers/navReducer";
 
-interface INavItemProps {
-    id?: string,
-    link: string,
-    text: string
-}
-
-const NavItem : React.FC<INavItemProps> = (props) =>{
+const NavItem : React.FC<NavItemType> = (props) =>{
     return (
       <div className={"nav-item"}>
-        <NavLink to={props.link}>{props.text}</NavLink>
+        <NavLink to={props.link}>{props.name}</NavLink>
       </div>
     );
 }
-interface INavigationProps {
-    navItems: Array<object>
-}
-let Nav : React.FC<INavigationProps> = (props) => {
+let Nav : React.FC<NavStateType> = (props) => {
     return (
         <nav className="top-nav">
-            {props.navItems.map((navLink:any) => {
-                return <NavItem key={navLink.id} link={navLink.link} text={navLink.name}/>
+            {props.navItems.map((navLink:NavItemType) => {
+                return <NavItem key={navLink.id} {...navLink}/>
             })}
 
         </nav>
