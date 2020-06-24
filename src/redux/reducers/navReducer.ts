@@ -1,5 +1,17 @@
+export type NavItemType = {
+    id: number,
+    name: string,
+    link: string
+}
+export type NavStateType = {
+    navItems : Array<NavItemType>
+}
+type ActionType = {
+    type: string,
+    data: NavStateType
+}
 
-let initialState : object = {
+let initialState : NavStateType = {
     navItems : [
         {
             id: 1,
@@ -29,7 +41,7 @@ let initialState : object = {
     ]
 };
 
-let navReducer = (state = initialState, action:any) => {
+let navReducer = (state = initialState, action:ActionType) => {
     return state;
 };
 

@@ -8,16 +8,16 @@ import RegisterSection from "./components/RegisterSection/RegisterSection";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <FirstSection/>
-      <SecondSection/>
-      <Users/>
-      <RegisterSection/>
-      <Footer/>
+
+    // @ts-ignore
+    return <div className="App">
+        <Header/>
+        <FirstSection/>
+        <SecondSection/>
+        <Users/>
+        <RegisterSection/>
+        <Footer/>
     </div>
-  );
 }
 
 export default App;

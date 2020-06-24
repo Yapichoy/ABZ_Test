@@ -2,10 +2,10 @@ import React, {useEffect} from "react";
 // @ts-ignore
 import { Form } from 'bootstrap-4-react';
 import {connect} from "react-redux";
-import {setPositionsThunkCreator} from "../../redux/reducers/positionsReducer";
+import {PositionType, setPositionsThunkCreator} from "../../redux/reducers/positionsReducer";
 
 interface IRegisterFormProps {
-    positions: Array<object>,
+    positions: Array<PositionType>,
     setPositions: Function
 }
 
@@ -34,7 +34,7 @@ const RegisterForm : React.FC<IRegisterFormProps> = (props) => {
             <Form.Group>
                 <label htmlFor="radio">Select your position</label>
                 {
-                    props.positions.map((position:any) => <Form.CustomRadio key={position.id} id={"Radio" + position.id} name="position">{position.name}</Form.CustomRadio>)
+                    props.positions.map((position: PositionType) => <Form.CustomRadio key={position.id} id={"Radio" + position.id} name="position">{position.name}</Form.CustomRadio>)
                 }
             </Form.Group>
             <Form.Group style={mtd_12}>
