@@ -5,6 +5,9 @@ const LOADING   = "LOADING";
 const LOADED    = "LOADED";
 
 // Generics
+export type UserResponseType = {
+
+}
 export type UserType = {
     id: number,
     name: string,

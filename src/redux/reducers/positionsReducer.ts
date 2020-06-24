@@ -2,11 +2,13 @@ import {getPositions} from "../../api/api";
 import {act} from "react-dom/test-utils";
 import {UserStateType} from "./usersReducer";
 
+
 export type PositionType = {
     id      : number,
     name    : string
 }
 export type PositionStateType = {
+    success? : boolean,
     positions: Array<PositionType>
 }
 type ActionType = {
