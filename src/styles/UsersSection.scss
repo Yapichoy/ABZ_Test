@@ -25,10 +25,6 @@
       font-weight: 400;
       color: $darkTextColor;
       margin: 10px 0 8px;
-      max-width: 240px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
     }
     .description {
       font-family: $mainFont;
@@ -37,9 +33,18 @@
       color: $greyColor;
       text-align: center;
       margin-bottom: 3px;
+
+    }
+    p {
       max-width: 240px;
       overflow: hidden;
       text-overflow: ellipsis;
     }
   }
+}
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  opacity: 0;
+}
+.tooltip-inner {
+  max-width: 100%!important;
 }
