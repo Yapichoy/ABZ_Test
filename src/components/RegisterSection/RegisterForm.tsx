@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 // @ts-ignore
 import { Form } from 'bootstrap-4-react';
+import {connect} from "react-redux";
+import {setPositionsThunkCreator} from "../../redux/reducers/positionsReducer";
 
-const RegisterForm = () => {
+interface IRegisterFormProps {
+    positions: Array<object>,
+    setPositions: Function
+}
+
+const RegisterForm : React.FC<IRegisterFormProps> = (props) => {
     const mtd_12 = {
         'margin-top': '-12px'
     }
+    useEffect(() => {
+        props.setPositions();
+    },[]);
     return (
         <Form>
             <Form.Group>
@@ -23,18 +33,9 @@ const RegisterForm = () => {
             </Form.Group>
             <Form.Group>
                 <label htmlFor="radio">Select your position</label>
-                <Form.CustomRadio id="Radio1" name="position">
-                    Frontend developer
-                </Form.CustomRadio>
-                <Form.CustomRadio id="Radio2" name="position">
-                    Backend developer
-                </Form.CustomRadio>
-                <Form.CustomRadio id="Radio3" name="position">
-                    Designer
-                </Form.CustomRadio>
-                <Form.CustomRadio id="Radio4" name="position">
-                    QA
-                </Form.CustomRadio>
+                {
+                    props.positions.map((position:any) => <Form.CustomRadio key={position.id} id={"Radio" + position.id} name="position">{position.name}</Form.CustomRadio>)
+                }
             </Form.Group>
             <Form.Group style={mtd_12}>
                 <label htmlFor="photo">Photo</label>
@@ -48,5 +49,13 @@ const RegisterForm = () => {
         </Form>
     );
 }
-
-export default RegisterForm;
+const mapStateToProps = (state:any) => {
+    return {
+        positions: state.positionsReducer.positions
+    }
+}
+const mapDispatchToProps = {
+    setPositions: setPositionsThunkCreator
+}
+const RegisterFormContainer = connect(mapStateToProps, mapDispatchToProps)(RegisterForm);
+export default RegisterFormContainer;
