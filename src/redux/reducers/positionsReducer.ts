@@ -33,6 +33,7 @@ let positionsReducer = (state = initialState, action : ActionType) => {
 
 export const setPositionsThunkCreator = () => (dispatch:any) => {
     getPositions().then((data: ActionType)=>{
+        debugger
         dispatch(setPositionsActionCreator(data));
     });
 }
